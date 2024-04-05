@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+      
+    body{
+     
+      background-image: url("https://cdn.glitch.global/2479040b-3bbe-48fc-8ca9-39feab9e044a/grilled-meat-skewers-chicken-shish-kebab-with-zucchini-tomatoes-red-onions.jpg?v=1690133449540");
+      background-repeat: no-repeat;
+      background-size: cover;
+      margin: 0;
+      padding: 0;
+      display: flex;
+     
+      height: 100vh;
+      background-position: center;
+    
+    }
+
+    .content h1{
+        font-size: 70px;
+        font-weight: bolder;
+        color: aliceblue;
+      }
+      .content{
+        
+        margin-bottom: 10%;
+      }
+      .content p{
+        font-size: 40px ;
+    color: antiquewhite;
+
+   }
+
+      *,
+      *:after{
+       
+       margin: 0;
+       box-sizing: border-box;
+       font-family: "poppins",sans-serif;
+       font-size: 60px;
+       font-weight: 500px;
+       }
+   
+   .wrapper{
+       box-sizing: content-box;
+      
+       height: 70px;
+       padding: 50px 30px;
+       display: flex;
+       justify-content: center;
+       
+   }
+   span{
+       display: block;
+       height: 100%;
+       padding-left: 10px;
+       color: red;
+       animation: spin_words 7s infinite ease;
+       font-size: 40px;
+   }
+   @keyframes spin_words{
+     
+     0%{
+           transform: translateY(0%);
+       }
+       25%{
+           transform: translateY(-100%);
+       }
+       50%{
+           transform: translateY(-200%);
+       }
+      
+       75%{
+           transform: translateY(-300%);
+       }
+      
+       100%{
+           transform: translateY(-400%);
+       }
+       
+      }
+   .words{
+       overflow: hidden;
+       font-weight: bold;
+   }
+   .wrapper p{
+       color: aliceblue;
+       font-size: 40px;
+   }
+   .container{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10%;
+    margin-top: auto;
+    margin-bottom: auto;
+    justify-content: center;
+    align-items: center;
+   }
+   .btn {
+        padding: 2% 3% 2% 3%;
+        font-size: 20px;
+        background-color: goldenrod;
+        color: white;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      .btn:hover {
+        background-color: #ed6b14;
+      }
+      .resname{
+        color: aliceblue;
+        font-size: 80px;
+      }
+      .resbio{
+        color: antiquewhite;
+        font-size: 40px;
+      }
+      .words{
+
+      }
+      
+    </style>
+<body>
+    <div class="container">
+        
+            <h1 class="resname">Wingman’s Paradise</h1> <br>
+            <p class="resbio">Super tasty food near you</p>
+        
+        <div class="wrapper">
+            <p> Let's Order your</p>
+            <div class="words">
+                <span>Biriyani</span>
+                <span>Burger</span>
+                <span>FriedRice</span>
+                <span>Milkshake</span>
+                <span>Pizza</span>
+            </div>
+        </div>
+        <button class="btn" onclick="menu()" 
+        style="font-size: 20px; float: right;">Let's Dive</button>
+    </div>
+    <script>
+   
+
+
+        function menu() {
+                location.href = "foodmenu.html";
+              }
+           </script>
+    
+    
+    
+</body>
+</html>
