@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Payment Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style type="text/css">
+        body {
+            font-family: Arial, sans-serif;
+            background-color: gray;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            max-width: 800px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px ;
+        }
+
+        .section {
+             flex: 1;
+            margin: 10px;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0  10px;
+        }
+
+        #head1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        .section h1 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        #img {
+            width: 150px;
+            height: 150px;
+            border-radius: 75px;
+            margin-right: 20px;
+        }
+
+        #button {
+            font-size: 16px;
+            margin-top: 10px;
+            background-color: #000;
+            border: none;
+            padding: 12px;
+            border-radius: 5px;
+            font-family: Arial, sans-serif;
+            color: white;
+            cursor: pointer;
+            text-transform: uppercase;
+            transition: background-color 0.3s;
+        }
+
+        #button:hover {
+            background-color: #222;
+        }
+
+        .cards i {
+            font-size: 32px;
+            margin: 0 5px;
+        }
+
+        .cards {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        #p {
+             
+            background-color: white;
+            border-radius: 20vh;
+        }
+    </style>
+</head>
+<body>
+     
+    <div class="container">
+       
+        <center><img id="img" src="https://www.kindpng.com/picc/m/353-3532908_secure-payment-page-transparent-secure-payments-hd-png.png" alt="Payment Logo"></center>
+        <div class="section">
+            <h1 id="head1">Shipping Address</h1>
+            <form id="Form" action="#">
+                <label>Full Name</label>
+                <input type="text" name="fullname" placeholder="Enter Full Name" required>
+                <label>Email</label>
+                <input type="email" name="email" placeholder="Enter Email" required>
+                <label>Address</label>
+                <input type="text" name="address" placeholder="Enter Address" required>
+                <label>State</label>
+                <input type="text" name="state" placeholder="Enter State" required>
+                <label>Zipcode</label>
+                <input type="text" name="zipcode" placeholder="Enter Zipcode" required>
+            </form>
+        </div>
+        <div class="section">
+            <h1>Payment</h1>
+            <div class="cards">
+                <i class="fab fa-cc-visa"></i>
+                <i class="fab fa-cc-paypal"></i>
+                <i class="fas fa-credit-card"></i>
+                <i class="fab fa-cc-amazon-pay"></i>
+            </div>
+            <form id="form1" action="#">
+                <label>Name on Card</label>
+                <input type="text" name="cardname" id="cardName" placeholder="Enter Name on Card" required>
+                <label>Card Number</label>
+                <input type="text" name="cardnumber" id="cardNumber" placeholder="Enter Card Number" required>
+                <label>Expiration Month</label>
+                <input type="text" name="expmonth" id="expiryDate" placeholder="MM" required>
+                <label>Expiration Year</label>
+                <input type="text" name="expyear"  id="expiryDate" placeholder="YYYY" required>
+                <label>CVV</label>
+                <input type="text" name="cvv" id="CVV" placeholder="Enter CVV" required>
+            </form>
+            <center><button id="button" onclick="submitForm()" type="submit">Proceed to Checkout</button></center>
+           
+        </div>
+    </div>
+<script type="text/javascript">
+   
+ 
+  const form = document.getElementById("Form");
+  const form1 = document.getElementById("form1");
+
+  function isNumericInput(input) {
+    
+    return !isNaN(parseInt(input));
+  }
+
+  function submitForm() {
+    const cardNumber = document.getElementById("cardNumber").value;
+    const cardName = document.getElementById("cardName").value;
+    const expiryDate = document.getElementById("expiryDate").value;
+    const cvv = document.getElementById("CVV").value;
+
+    if (isNumericInput(cardNumber) && cardName && expiryDate && cvv) {
+      alert("Payment Successful!");
+      form.reset();
+      form1.reset();
+      setTimeout(function() {
+        window.location.href = "https://momentumacademy.net/wp-content/uploads/2020/05/Paymentsuccessful21.png";
+      }, 2000);
+    } else {
+      alert("Please fill all fields correctly.");
+    }
+  }
+
+
+</script>
+</body>
+</html>
